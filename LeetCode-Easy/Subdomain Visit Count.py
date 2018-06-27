@@ -21,3 +21,4 @@ def subdomainVisits(cpdomains):
             temp = ' '.join([str(d[key]),key])
             result.append(temp)
         return (result)
+
