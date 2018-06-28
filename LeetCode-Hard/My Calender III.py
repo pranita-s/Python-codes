@@ -1,3 +1,5 @@
+# TIME - O(n ** 2)
+
 import bisect
 class MyCalendarThree(object):
 
