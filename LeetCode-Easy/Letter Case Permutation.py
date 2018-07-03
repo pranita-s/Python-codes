@@ -5,7 +5,7 @@
 def letterCasePermutation(S):
   
   def changeCase(ch):
-    return ch.upper() if ch.lower else ch.lower()
+    return ch.upper() if ch.islower() else ch.lower()
   
   def becktrack(res,S,start):
     res.append(S)
