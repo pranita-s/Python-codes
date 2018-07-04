@@ -1,4 +1,7 @@
-ef backspaceCompare(S, T):
+# TIME - O(m + n)
+# SPACE - O(m + n)
+
+def backspaceCompare(S, T):
         """
         :type S: str
         :type T: str
