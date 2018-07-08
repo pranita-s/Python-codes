@@ -8,7 +8,7 @@ def minDiff(self,root):
   def inorder(root):
     if root:
       inorder(root.left)
-      self.minimum = min(self.minimum, root.val - self.previous)
+      self.minimum = min(self.minimum, abs(root.val - self.previous))
       self.previous = root.val
       inorder(root.right)
     
