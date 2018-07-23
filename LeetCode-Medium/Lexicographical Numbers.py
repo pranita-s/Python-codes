@@ -1,3 +1,4 @@
+# TIME - O(n)
 
 # RECURSIVE
 
