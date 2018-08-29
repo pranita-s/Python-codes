@@ -27,28 +27,29 @@ def graphValidTree2(n,edges):
   if len(edges) != n-1:
     return False
   
-  nei = collections.defaultdict(list)
-  for u,v in edges:
-    nei[u].append(v)
-    nei[v].append(u)
+  graph = collections.defaultdict(list)
   
+  for u,v in edges:
+    graph[u].append(v)
+    graph[v].append(u)
+  
+  visited = [False] * n
   parent = [-1] * n
-  visited = {}
   q = collections.deque([0])
   while q:
     node = q.popleft()
     visited[node] = True
-    for neighbor in nei[node]:
-      if parent[neighbor] != node:
-        if neighbor in visited:
+    for neighbor in graph[node]:
+      if neighbor != parent[node]:
+        if visited[neighbor]:
           return False
         else:
           parent[neighbor] = node
+          a.append(neighbor)
           visited[neighbor] = True
-          q.append(neighbor)
-  return True
-          
-          
+   return True
+  
+  
           
           
       
