@@ -52,14 +52,32 @@ def graphValidTree2(n,edges):
   
           
           
-      
-      
-      
-      
-      
-      
+ 
+def graphValidTree():
+  
+  def hasCycle(cur,parent):
     
-    
+    visited[cur]= True
+    for nei in g[cur]:
+      if visited.get(nei,False) == False:
+        if hasCycle(nei,cur) == True:
+          return True
+         # If an adjacent is visited and not  
+            # parent of current vertex, then there  
+            # is a cycle.
+      elif nei != parent:
+        return True
+    return False
+  
+  visited = {}
+  if hasCycle(0,-1): 
+    return False
+  
+  return len(visited)==num_vertices
+  
+      
+      
+     
     
     
     
